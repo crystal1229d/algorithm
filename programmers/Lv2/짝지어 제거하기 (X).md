@@ -7,7 +7,18 @@
 <hr />
 
 ```js
-
+function solution(s)
+{
+    let stack = [];
+    for (let i=0; i<s.length; i++) {
+        if (stack[stack.length-1] === s[i]) {
+            stack.pop();
+        } else {
+            stack.push(s[i]);
+        }
+    }
+    return stack.length === 0 ? 1 : 0;
+}
 ```
 
 <br />
@@ -31,5 +42,6 @@ function solution(s)
 }
 ```
 
-2. 2차풀이 = 최종풀이 
+2. 2차풀이 = 1차풀이 = 최종풀이 
 * 여기서 어떻게 더 효율을 따지면서 풀어내야할지 생각해내지못함.. 
+* 다른날 1번 풀이 실행하니 통과. 왜 ?
